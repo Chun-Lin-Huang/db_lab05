@@ -1,4 +1,3 @@
-// transactionExample.js
 const pool = require('./db');
 
 async function doTransaction() {
