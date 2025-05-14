@@ -8,8 +8,8 @@ async function doTransaction() {
 
         // 查詢學生的學號是否存在
         const checkStudent = 'SELECT * FROM STUDENT WHERE Student_ID = ?';
-        const rows = await conn.query(checkStudent, ['S10810005']); // 學號不存在
-        //const rows = await conn.query(checkStudent, ['S10811005']); // 學號存在
+        //const rows = await conn.query(checkStudent, ['S10810005']); // 學號不存在
+        const rows = await conn.query(checkStudent, ['S10811005']); // 學號存在
         if (rows.length === 0) {
             throw new Error('學生學號不存在');
         } else {
